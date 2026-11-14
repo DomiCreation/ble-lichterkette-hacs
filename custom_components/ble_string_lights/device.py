@@ -17,7 +17,7 @@ from .protocol import WRITE_CHAR_UUIDS, build_frame
 _LOGGER = logging.getLogger(__name__)
 
 
-class LichterketteDevice:
+class StringLightsDevice:
     """Sends commands to one light set over Bluetooth LE."""
 
     def __init__(self, ble_device: BLEDevice, name: str, keep_connected: bool) -> None:

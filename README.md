@@ -1,6 +1,8 @@
-# BLE Lichterkette for Home Assistant
+# BLE String Lights for Home Assistant
 
 Custom integration that controls Bluetooth LED string lights (the kind otherwise operated with the iPhone app) directly from Home Assistant. **Tested with Lumineo light chain/string lights.**
+
+If you already installed the previous version (domain `ble_lichterkette`), remove that integration and add this one again. Devices and entities are not migrated automatically.
 
 ## Features
 
@@ -27,27 +29,27 @@ HACS ships with Home Assistant as **Settings → Marketplace**. To add this repo
 
 1. Go to **Settings → Marketplace**.
 2. In the upper-right corner, select **Add from link**.
-3. Enter `https://github.com/DomiCreation/ble-lichterkette-hacs` (or `DomiCreation/ble-lichterkette-hacs`) and select **Add**. Connect GitHub if prompted.
+3. Enter `https://github.com/DomiCreation/ble-string-lights-hacs` (or `DomiCreation/ble-string-lights-hacs`) and select **Add**. Connect GitHub if prompted.
 4. Open the repository in the list and install it, then restart Home Assistant if asked.
 
 ### Home Assistant 2024.6–2026.10 (HACS)
 
 1. [Install HACS](https://www.hacs.xyz/docs/use/download/download/) if you do not have it yet.
-2. In Home Assistant: **HACS → ⋮ → Custom repositories**, add `https://github.com/DomiCreation/ble-lichterkette-hacs`, category **Integration**.
-3. Download **BLE Lichterkette** and restart Home Assistant.
+2. In Home Assistant: **HACS → ⋮ → Custom repositories**, add `https://github.com/DomiCreation/ble-string-lights-hacs`, category **Integration**.
+3. Download **BLE String Lights** and restart Home Assistant.
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DomiCreation&repository=ble-lichterkette-hacs&category=integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DomiCreation&repository=ble-string-lights-hacs&category=integration)
 
 On Home Assistant 2026.11 and later this my-link still works; it opens the repository in the Marketplace.
 
 ### Manual
 
-Copy `custom_components/ble_lichterkette` to `/config/custom_components/ble_lichterkette` and restart Home Assistant.
+Copy `custom_components/ble_string_lights` to `/config/custom_components/ble_string_lights` and restart Home Assistant.
 
 ## Setup
 
 1. Switch the lights on and close the iPhone app.
-2. If Home Assistant discovers them, they appear under **Settings → Devices & services** as a discovered device. Otherwise: **Add integration → BLE Lichterkette** and pick the device from the list (**★** = advertises the expected Bluetooth service).
+2. If Home Assistant discovers them, they appear under **Settings → Devices & services** as a discovered device. Otherwise: **Add integration → BLE String Lights** and pick the device from the list (**★** = advertises the expected Bluetooth service).
 3. Several strings can be switched together with a Home Assistant [light group](https://www.home-assistant.io/integrations/group/#light-group).
 
 Option **Keep the Bluetooth connection open** under **Configure** (default on), like the app. When off, the connection is released 30 seconds after the last command so the phone app can connect in between.
@@ -57,7 +59,7 @@ Example:
 ```yaml
 action: light.turn_on
 target:
-  entity_id: light.lichterkette
+  entity_id: light.string_lights
 data:
   effect: "Twinkle/Flash"
 ```
@@ -90,9 +92,11 @@ The protocol is documented in [`MECHANICS.md`](MECHANICS.md).
 
 ---
 
-# BLE Lichterkette für Home Assistant
+# BLE String Lights für Home Assistant
 
 Benutzerdefinierte Integration, die Bluetooth-Lichterketten (die sonst mit der iPhone-App bedient werden) direkt aus Home Assistant steuert. **Getestet mit Lumineo Lichterkette.**
+
+Wer die alte Version (Domain `ble_lichterkette`) installiert hatte, muss die alte Integration entfernen und die neue neu hinzufügen. Geräte und Entitäten werden nicht automatisch übernommen.
 
 ## Funktionen
 
@@ -119,27 +123,27 @@ Ab dieser Version ist HACS als **Einstellungen → Marketplace** fest eingebaut.
 
 1. **Einstellungen → Marketplace** öffnen.
 2. Oben rechts **Add from link** / **Über Link hinzufügen** wählen.
-3. `https://github.com/DomiCreation/ble-lichterkette-hacs` (oder `DomiCreation/ble-lichterkette-hacs`) eintragen und **Add** wählen. GitHub bei Bedarf verbinden.
+3. `https://github.com/DomiCreation/ble-string-lights-hacs` (oder `DomiCreation/ble-string-lights-hacs`) eintragen und **Add** wählen. GitHub bei Bedarf verbinden.
 4. Das Repository in der Liste öffnen, installieren und Home Assistant bei Bedarf neu starten.
 
 ### Home Assistant 2024.6–2026.10 (HACS)
 
 1. [HACS installieren](https://www.hacs.xyz/docs/use/download/download/), falls noch nicht vorhanden.
-2. In Home Assistant: **HACS → ⋮ → Benutzerdefinierte Repositories**, `https://github.com/DomiCreation/ble-lichterkette-hacs` eintragen, Typ **Integration**.
-3. **BLE Lichterkette** herunterladen und Home Assistant neu starten.
+2. In Home Assistant: **HACS → ⋮ → Benutzerdefinierte Repositories**, `https://github.com/DomiCreation/ble-string-lights-hacs` eintragen, Typ **Integration**.
+3. **BLE String Lights** herunterladen und Home Assistant neu starten.
 
-[![Home Assistant öffnen und das Repository im Home Assistant Community Store anzeigen.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DomiCreation&repository=ble-lichterkette-hacs&category=integration)
+[![Home Assistant öffnen und das Repository im Home Assistant Community Store anzeigen.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DomiCreation&repository=ble-string-lights-hacs&category=integration)
 
 Unter Home Assistant 2026.11 und neuer funktioniert dieser My-Link weiterhin und öffnet das Repository im Marketplace.
 
 ### Manuell
 
-Den Ordner `custom_components/ble_lichterkette` nach `/config/custom_components/ble_lichterkette` kopieren und Home Assistant neu starten.
+Den Ordner `custom_components/ble_string_lights` nach `/config/custom_components/ble_string_lights` kopieren und Home Assistant neu starten.
 
 ## Einrichten
 
 1. Lichterkette einschalten und die iPhone-App schließen.
-2. Wird sie automatisch gefunden, erscheint sie unter **Einstellungen → Geräte & Dienste** als entdeckt. Sonst: **Integration hinzufügen → BLE Lichterkette** und das Gerät aus der Liste wählen (**★** = sendet den erwarteten Bluetooth-Dienst).
+2. Wird sie automatisch gefunden, erscheint sie unter **Einstellungen → Geräte & Dienste** als entdeckt. Sonst: **Integration hinzufügen → BLE String Lights** und das Gerät aus der Liste wählen (**★** = sendet den erwarteten Bluetooth-Dienst).
 3. Mehrere Lichterketten gemeinsam schalten: in Home Assistant eine [Lichtgruppe](https://www.home-assistant.io/integrations/group/#light-group) anlegen.
 
 Option **Bluetooth-Verbindung offen halten** unter **Konfigurieren** (Standard: an), wie in der App. Wenn aus, wird die Verbindung 30 Sekunden nach dem letzten Befehl freigegeben, damit die Handy-App zwischendurch verbinden kann.
@@ -149,7 +153,7 @@ Beispiel:
 ```yaml
 action: light.turn_on
 target:
-  entity_id: light.lichterkette
+  entity_id: light.string_lights
 data:
   effect: "Twinkle/Flash"
 ```

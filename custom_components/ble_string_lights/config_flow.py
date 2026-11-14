@@ -32,8 +32,8 @@ def _title(info: BluetoothServiceInfoBleak) -> str:
     return name
 
 
-class LichterketteConfigFlow(ConfigFlow, domain=DOMAIN):
-    """Config flow for BLE Lichterkette."""
+class StringLightsConfigFlow(ConfigFlow, domain=DOMAIN):
+    """Config flow for BLE String Lights."""
 
     VERSION = 1
 
@@ -119,10 +119,10 @@ class LichterketteConfigFlow(ConfigFlow, domain=DOMAIN):
     @staticmethod
     @callback
     def async_get_options_flow(config_entry: ConfigEntry) -> OptionsFlow:
-        return LichterketteOptionsFlow()
+        return StringLightsOptionsFlow()
 
 
-class LichterketteOptionsFlow(OptionsFlow):
+class StringLightsOptionsFlow(OptionsFlow):
     """Keep the Bluetooth connection open (like the app) or release it."""
 
     async def async_step_init(
