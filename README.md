@@ -1,6 +1,6 @@
 # BLE String Lights for Home Assistant 🇺🇸
 
-Custom integration that controls Bluetooth LED string lights (the kind otherwise operated with the iPhone app) directly from Home Assistant. **Tested with Lumineo light chain/string lights.**
+Custom integration that controls Bluetooth LED string lights (the kind otherwise operated with the iPhone app) directly from Home Assistant. **Tested with Lumineo light chain/string lights (Lumineo LED’s Connect lights).**
 
 ## Features
 
@@ -64,7 +64,7 @@ data:
 
 ## Supported devices
 
-GATT service `00001000-0000-1000-8000-00805f9b34fb` or `00002000-0000-1000-8000-00805f9b34fb` with the matching app's protocol. **Tested with Lumineo light chain/string lights.** Others with the same services and protocol may work; that is unverified.
+GATT service `00001000-0000-1000-8000-00805f9b34fb` or `00002000-0000-1000-8000-00805f9b34fb` with the matching app's protocol. **Tested with Lumineo light chain/string lights (Lumineo LED’s Connect lights).** Others with the same services and protocol may work; that is unverified.
 
 The protocol is documented in [`MECHANICS.md`](MECHANICS.md).
 
@@ -72,7 +72,7 @@ The protocol is documented in [`MECHANICS.md`](MECHANICS.md).
 
 # BLE String Lights für Home Assistant 🇩🇪
 
-Benutzerdefinierte Integration, die Bluetooth-Lichterketten (die sonst mit der iPhone-App bedient werden) direkt aus Home Assistant steuert. **Getestet mit Lumineo Lichterkette.**
+Benutzerdefinierte Integration, die Bluetooth-Lichterketten (die sonst mit der iPhone-App bedient werden) direkt aus Home Assistant steuert. **Getestet mit Lumineo Lichterkette (Lumineo LED’s Connect lights).**
 
 ## Funktionen
 
@@ -136,6 +136,6 @@ data:
 
 ## Unterstützte Geräte
 
-GATT-Dienst `00001000-0000-1000-8000-00805f9b34fb` oder `00002000-0000-1000-8000-00805f9b34fb` mit dem Protokoll der passenden App. **Getestet mit Lumineo Lichterkette.** Andere Geräte mit denselben Diensten und demselben Protokoll können funktionieren; das ist nicht geprüft.
+GATT-Dienst `00001000-0000-1000-8000-00805f9b34fb` oder `00002000-0000-1000-8000-00805f9b34fb` mit dem Protokoll der passenden App. **Getestet mit Lumineo Lichterkette (Lumineo LED’s Connect lights).** Andere Geräte mit denselben Diensten und demselben Protokoll können funktionieren; das ist nicht geprüft.
 
 Das Protokoll steht in [`MECHANICS.md`](MECHANICS.md).
