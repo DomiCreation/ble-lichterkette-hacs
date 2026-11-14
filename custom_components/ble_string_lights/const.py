@@ -1,8 +1,8 @@
-"""Constants for the BLE Lichterkette integration."""
+"""Constants for the BLE String Lights integration."""
 from __future__ import annotations
 
-DOMAIN = "ble_lichterkette"
-DEFAULT_NAME = "Lichterkette"
+DOMAIN = "ble_string_lights"
+DEFAULT_NAME = "String Lights"
 
 # The app keeps the connection open while its control screen is open and only
 # disconnects when you leave it (-[ZDSearchViewController disConnectSelectDevice]

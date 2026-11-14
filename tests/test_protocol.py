@@ -8,7 +8,7 @@ import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location(
-    "protocol", HERE.parent / "custom_components" / "ble_lichterkette" / "protocol.py"
+    "protocol", HERE.parent / "custom_components" / "ble_string_lights" / "protocol.py"
 )
 p = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(p)

@@ -1,5 +1,5 @@
 //! Bluetooth protocol of the light sets. Same rules as
-//! custom_components/ble_lichterkette/protocol.py; addresses in MECHANICS.md.
+//! custom_components/ble_string_lights/protocol.py; addresses in MECHANICS.md.
 
 use uuid::Uuid;
 

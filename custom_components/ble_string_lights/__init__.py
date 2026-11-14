@@ -1,4 +1,4 @@
-"""BLE Lichterkette: control Bluetooth light sets from Home Assistant."""
+"""BLE String Lights: control Bluetooth light sets from Home Assistant."""
 from __future__ import annotations
 
 from homeassistant.components import bluetooth
@@ -8,24 +8,24 @@ from homeassistant.core import HomeAssistant, callback
 from homeassistant.exceptions import ConfigEntryNotReady
 
 from .const import CONF_KEEP_CONNECTED, DEFAULT_KEEP_CONNECTED, DEFAULT_NAME
-from .device import LichterketteDevice
+from .device import StringLightsDevice
 
 PLATFORMS: list[Platform] = [Platform.LIGHT]
 
-LichterketteConfigEntry = ConfigEntry[LichterketteDevice]
+StringLightsConfigEntry = ConfigEntry[StringLightsDevice]
 
 
-async def async_setup_entry(hass: HomeAssistant, entry: LichterketteConfigEntry) -> bool:
+async def async_setup_entry(hass: HomeAssistant, entry: StringLightsConfigEntry) -> bool:
     address: str = entry.data[CONF_ADDRESS]
     ble_device = bluetooth.async_ble_device_from_address(
         hass, address.upper(), connectable=True
     )
     if ble_device is None:
         raise ConfigEntryNotReady(
-            f"Lichterkette {address} ist gerade nicht in Bluetooth-Reichweite"
+            f"String lights {address} are currently out of Bluetooth range"
         )
 
-    device = LichterketteDevice(
+    device = StringLightsDevice(
         ble_device,
         entry.data.get(CONF_NAME) or DEFAULT_NAME,
         entry.options.get(CONF_KEEP_CONNECTED, DEFAULT_KEEP_CONNECTED),
@@ -53,11 +53,11 @@ async def async_setup_entry(hass: HomeAssistant, entry: LichterketteConfigEntry)
     return True
 
 
-async def _options_updated(hass: HomeAssistant, entry: LichterketteConfigEntry) -> None:
+async def _options_updated(hass: HomeAssistant, entry: StringLightsConfigEntry) -> None:
     await hass.config_entries.async_reload(entry.entry_id)
 
 
-async def async_unload_entry(hass: HomeAssistant, entry: LichterketteConfigEntry) -> bool:
+async def async_unload_entry(hass: HomeAssistant, entry: StringLightsConfigEntry) -> bool:
     unloaded = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unloaded:
         await entry.runtime_data.stop()

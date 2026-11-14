@@ -17,7 +17,7 @@ from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.restore_state import RestoreEntity
 
-from . import LichterketteConfigEntry
+from . import StringLightsConfigEntry
 from .const import DOMAIN
 from .protocol import (
     CMD_OFF,
@@ -33,13 +33,13 @@ from .protocol import (
 
 async def async_setup_entry(
     hass: HomeAssistant,
-    entry: LichterketteConfigEntry,
+    entry: StringLightsConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    async_add_entities([LichterketteLight(entry)])
+    async_add_entities([StringLightsLight(entry)])
 
 
-class LichterketteLight(LightEntity, RestoreEntity):
+class StringLightsLight(LightEntity, RestoreEntity):
     """One light set."""
 
     _attr_has_entity_name = True
@@ -51,7 +51,7 @@ class LichterketteLight(LightEntity, RestoreEntity):
     _attr_supported_features = LightEntityFeature.EFFECT
     _attr_effect_list = EFFECT_LIST
 
-    def __init__(self, entry: LichterketteConfigEntry) -> None:
+    def __init__(self, entry: StringLightsConfigEntry) -> None:
         self._device = entry.runtime_data
         address = self._device.address
         self._attr_unique_id = address
@@ -59,7 +59,7 @@ class LichterketteLight(LightEntity, RestoreEntity):
             identifiers={(DOMAIN, address)},
             connections={(dr.CONNECTION_BLUETOOTH, address)},
             name=entry.title,
-            model="Bluetooth-Lichterkette",
+            model="Bluetooth string lights",
         )
         self._attr_is_on = False
         self._attr_brightness = brightness_from_level(3)
