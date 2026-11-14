@@ -68,26 +68,6 @@ data:
 
 GATT service `00001000-0000-1000-8000-00805f9b34fb` or `00002000-0000-1000-8000-00805f9b34fb` with the matching app's protocol. **Tested with Lumineo light chain/string lights.** Others with the same services and protocol may work; that is unverified.
 
-## Optional Mac / PC test tools
-
-A small Rust window app sends the same commands as the integration:
-
-```sh
-cargo run --release
-```
-
-Without a window, use the Python tool:
-
-```sh
-python3 -m pip install bleak
-python3 tools/lichterkette_test.py scan
-python3 tools/lichterkette_test.py <address> on
-python3 tools/lichterkette_test.py <address> mode 3
-python3 tools/lichterkette_test.py <address> steady 50
-```
-
-Modes: 1 Combination, 2 In waves, 3 Sequential, 4 Slow glow, 5 Chase/Flash, 6 Twinkle/Flash, 7 Slow fade. On a Mac, `scan` may show a long identifier instead of a MAC address; that identifier is only for the local test tool. Home Assistant shows the real Bluetooth address.
-
 The protocol is documented in [`MECHANICS.md`](MECHANICS.md).
 
 ---
@@ -161,25 +141,5 @@ data:
 ## Unterstützte Geräte
 
 GATT-Dienst `00001000-0000-1000-8000-00805f9b34fb` oder `00002000-0000-1000-8000-00805f9b34fb` mit dem Protokoll der passenden App. **Getestet mit Lumineo Lichterkette.** Andere Geräte mit denselben Diensten und demselben Protokoll können funktionieren; das ist nicht geprüft.
-
-## Optionale Testwerkzeuge (Mac / PC)
-
-Ein kleines Rust-Fensterprogramm schickt dieselben Befehle wie die Integration:
-
-```sh
-cargo run --release
-```
-
-Ohne Fenster geht es mit dem Python-Werkzeug:
-
-```sh
-python3 -m pip install bleak
-python3 tools/lichterkette_test.py scan
-python3 tools/lichterkette_test.py <Adresse> on
-python3 tools/lichterkette_test.py <Adresse> mode 3
-python3 tools/lichterkette_test.py <Adresse> steady 50
-```
-
-Modi: 1 Combination, 2 In waves, 3 Sequential, 4 Slow glow, 5 Chase/Flash, 6 Twinkle/Flash, 7 Slow fade. Am Mac zeigt `scan` statt einer MAC-Adresse oft eine lange Kennung – die gilt nur für das lokale Testwerkzeug. Home Assistant zeigt die echte Bluetooth-Adresse.
 
 Das Protokoll steht in [`MECHANICS.md`](MECHANICS.md).
