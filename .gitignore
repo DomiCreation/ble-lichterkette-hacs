@@ -1,0 +1,5 @@
+.venv/
+shots/
+__pycache__/
+target/
+.DS_Store

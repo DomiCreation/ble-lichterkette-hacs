@@ -1,0 +1,37 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Lichterkette auswählen",
+        "description": "Lichterketten, die den passenden Bluetooth-Dienst senden, sind mit ★ markiert. Schalte die Lichterkette ein und bleib in der Nähe deines Bluetooth-Adapters oder Proxys.",
+        "data": {
+          "address": "Bluetooth-Gerät",
+          "name": "Name"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Lichterkette gefunden",
+        "description": "{name} ({address}) hinzufügen?",
+        "data": {
+          "name": "Name"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Diese Lichterkette ist bereits eingerichtet.",
+      "no_devices_found": "Keine Bluetooth-Geräte gefunden. Schalte die Lichterkette ein und versuche es erneut."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Verbindung",
+        "description": "Verbindung halten: Wie in der App bleibt die Bluetooth-Verbindung offen, damit Befehle sofort wirken. Schalte das aus, wenn du zusätzlich die Handy-App nutzen willst; die Verbindung wird dann 30 Sekunden nach dem letzten Befehl freigegeben.",
+        "data": {
+          "keep_connected": "Bluetooth-Verbindung offen halten"
+        }
+      }
+    }
+  }
+}

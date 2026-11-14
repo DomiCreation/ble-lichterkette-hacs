@@ -1,0 +1,37 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Choose your light set",
+        "description": "Light sets that advertise the expected Bluetooth service are marked with ★. Switch the light set on and stay close to your Bluetooth adapter or proxy.",
+        "data": {
+          "address": "Bluetooth device",
+          "name": "Name"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Light set found",
+        "description": "Add {name} ({address})?",
+        "data": {
+          "name": "Name"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This light set is already set up.",
+      "no_devices_found": "No Bluetooth devices found. Switch the light set on and try again."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Connection",
+        "description": "Keep connected: like the app, the Bluetooth connection stays open so commands react at once. Turn it off if you also want to use the phone app; the connection is then released 30 seconds after the last command.",
+        "data": {
+          "keep_connected": "Keep the Bluetooth connection open"
+        }
+      }
+    }
+  }
+}
