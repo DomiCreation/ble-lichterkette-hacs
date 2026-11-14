@@ -2,8 +2,6 @@
 
 Custom integration that controls Bluetooth LED string lights (the kind otherwise operated with the iPhone app) directly from Home Assistant. **Tested with Lumineo light chain/string lights.**
 
-If you already installed the previous version (domain `ble_lichterkette`), remove that integration and add this one again. Devices and entities are not migrated automatically.
-
 ## Features
 
 - On / Off
@@ -75,8 +73,6 @@ The protocol is documented in [`MECHANICS.md`](MECHANICS.md).
 # BLE String Lights für Home Assistant
 
 Benutzerdefinierte Integration, die Bluetooth-Lichterketten (die sonst mit der iPhone-App bedient werden) direkt aus Home Assistant steuert. **Getestet mit Lumineo Lichterkette.**
-
-Wer die alte Version (Domain `ble_lichterkette`) installiert hatte, muss die alte Integration entfernen und die neue neu hinzufügen. Geräte und Entitäten werden nicht automatisch übernommen.
 
 ## Funktionen
 
