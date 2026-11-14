@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "values": [
+    {
+      "name": "scan service uuid",
+      "group": "bluetooth",
+      "value": "1000"
+    },
+    {
+      "name": "scan name filter",
+      "group": "bluetooth",
+      "value": false
+    },
+    {
+      "name": "command characteristic uuid",
+      "group": "bluetooth",
+      "value": "1001"
+    },
+    {
+      "name": "alternative service/characteristic",
+      "group": "bluetooth",
+      "value": "2000/2001"
+    },
+    {
+      "name": "write without response",
+      "group": "bluetooth",
+      "value": true
+    },
+    {
+      "name": "frame encryption on",
+      "group": "frame",
+      "value": true
+    },
+    {
+      "name": "frame mark byte",
+      "group": "frame",
+      "value": 84,
+      "unit": "0x54"
+    },
+    {
+      "name": "frame length",
+      "group": "frame",
+      "value": "command bytes + 3"
+    },
+    {
+      "name": "frame key",
+      "group": "frame",
+      "value": "rand()*255 low byte"
+    },
+    {
+      "name": "hex parse rule",
+      "group": "frame",
+      "value": "uppercase, spaces removed, odd length rejected"
+    },
+    {
+      "name": "turn on",
+      "group": "commands",
+      "value": "AD030100"
+    },
+    {
+      "name": "turn off",
+      "group": "commands",
+      "value": "AD030000"
+    },
+    {
+      "name": "combination",
+      "group": "modes",
+      "value": "AD0101"
+    },
+    {
+      "name": "in waves",
+      "group": "modes",
+      "value": "AD0102"
+    },
+    {
+      "name": "sequential",
+      "group": "modes",
+      "value": "AD0103"
+    },
+    {
+      "name": "slow glow",
+      "group": "modes",
+      "value": "AD0104"
+    },
+    {
+      "name": "chase flash",
+      "group": "modes",
+      "value": "AD0105"
+    },
+    {
+      "name": "twinkle flash",
+      "group": "modes",
+      "value": "AD0107"
+    },
+    {
+      "name": "slow fade",
+      "group": "modes",
+      "value": "AD0106"
+    },
+    {
+      "name": "steady 100 percent",
+      "group": "brightness",
+      "value": "AD010803"
+    },
+    {
+      "name": "steady 75 percent",
+      "group": "brightness",
+      "value": "AD010802"
+    },
+    {
+      "name": "steady 50 percent",
+      "group": "brightness",
+      "value": "AD010801"
+    },
+    {
+      "name": "steady 25 percent",
+      "group": "brightness",
+      "value": "AD010800"
+    },
+    {
+      "name": "level byte formula",
+      "group": "brightness",
+      "value": "4 - app level"
+    },
+    {
+      "name": "steady with no level chosen",
+      "group": "brightness",
+      "value": "sends nothing (HA starts at 100 %)"
+    },
+    {
+      "name": "keep connection open",
+      "group": "connection",
+      "value": true
+    },
+    {
+      "name": "disconnect stagger",
+      "group": "connection",
+      "value": 0.01,
+      "unit": "s per light set"
+    },
+    {
+      "name": "reconnect interval",
+      "group": "connection",
+      "value": 0.2,
+      "unit": "s"
+    },
+    {
+      "name": "reconnect attempts",
+      "group": "connection",
+      "value": 20
+    },
+    {
+      "name": "idle disconnect when not keeping connected",
+      "group": "connection",
+      "value": 30,
+      "unit": "s",
+      "estimated": true
+    },
+    {
+      "name": "state read back from device",
+      "group": "connection",
+      "value": false
+    }
+  ]
+}

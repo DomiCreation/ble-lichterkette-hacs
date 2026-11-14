@@ -1,0 +1,23 @@
+{
+  "domain": "ble_string_lights",
+  "name": "BLE String Lights",
+  "bluetooth": [
+    {
+      "service_uuid": "00001000-0000-1000-8000-00805f9b34fb",
+      "connectable": true
+    },
+    {
+      "service_uuid": "00002000-0000-1000-8000-00805f9b34fb",
+      "connectable": true
+    }
+  ],
+  "codeowners": ["@DomiCreation"],
+  "config_flow": true,
+  "dependencies": ["bluetooth_adapters"],
+  "documentation": "https://github.com/DomiCreation/ble-string-lights-hacs",
+  "integration_type": "device",
+  "iot_class": "assumed_state",
+  "issue_tracker": "https://github.com/DomiCreation/ble-string-lights-hacs/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
