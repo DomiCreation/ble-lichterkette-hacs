@@ -50,7 +50,7 @@ Copy `custom_components/ble_string_lights` to `/config/custom_components/ble_str
 2. If Home Assistant discovers them, they appear under **Settings → Devices & services** as a discovered device. Otherwise: **Add integration → BLE String Lights** and pick the device from the list (**★** = advertises the expected Bluetooth service).
 3. Several strings can be switched together with a Home Assistant [light group](https://www.home-assistant.io/integrations/group/#light-group).
 
-![Dialog "Lichterkette auswählen" with the Bluetooth device field. Devices marked with ★ advertise the expected service.](docs/images/add-device.png)
+<img src="docs/images/add-device.png" alt="Dialog 'Lichterkette auswählen' with the Bluetooth device field. Devices marked with ★ advertise the expected service." width="400">
 
 Option **Keep the Bluetooth connection open** under **Configure** (default on), like the app. When off, the connection is released 30 seconds after the last command so the phone app can connect in between.
 
@@ -66,7 +66,7 @@ data:
 
 The effect can also be picked directly on the light's card in Home Assistant, under **Effekt**:
 
-![Light card with the effect menu open, listing all eight programs, Steady selected](docs/images/effect-menu.png)
+<img src="docs/images/effect-menu.png" alt="Light card with the effect menu open, listing all eight programs, Steady selected" width="280">
 
 ## Supported devices
 
@@ -128,7 +128,7 @@ Den Ordner `custom_components/ble_string_lights` nach `/config/custom_components
 2. Wird sie automatisch gefunden, erscheint sie unter **Einstellungen → Geräte & Dienste** als entdeckt. Sonst: **Integration hinzufügen → BLE String Lights** und das Gerät aus der Liste wählen (**★** = sendet den erwarteten Bluetooth-Dienst).
 3. Mehrere Lichterketten gemeinsam schalten: in Home Assistant eine [Lichtgruppe](https://www.home-assistant.io/integrations/group/#light-group) anlegen.
 
-![Dialog „Lichterkette auswählen“ mit dem Feld Bluetooth-Gerät. Geräte mit ★ senden den erwarteten Dienst.](docs/images/add-device.png)
+<img src="docs/images/add-device.png" alt="Dialog „Lichterkette auswählen“ mit dem Feld Bluetooth-Gerät. Geräte mit ★ senden den erwarteten Dienst." width="400">
 
 Option **Bluetooth-Verbindung offen halten** unter **Konfigurieren** (Standard: an), wie in der App. Wenn aus, wird die Verbindung 30 Sekunden nach dem letzten Befehl freigegeben, damit die Handy-App zwischendurch verbinden kann.
 
@@ -144,7 +144,7 @@ data:
 
 Den Effekt lässt sich auch direkt auf der Karte der Lichterkette in Home Assistant unter **Effekt** wählen:
 
-![Lichterkette-Karte mit geöffnetem Effekt-Menü, alle acht Programme, Steady ausgewählt](docs/images/effect-menu.png)
+<img src="docs/images/effect-menu.png" alt="Lichterkette-Karte mit geöffnetem Effekt-Menü, alle acht Programme, Steady ausgewählt" width="280">
 
 ## Unterstützte Geräte
 
