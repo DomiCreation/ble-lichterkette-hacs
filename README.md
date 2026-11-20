@@ -21,24 +21,24 @@ The lights usually accept only one Bluetooth connection at a time. Close the iPh
 
 ## Installation
 
-### Home Assistant 2026.11 and later (Marketplace)
+### HACS / Marketplace (recommended)
 
-HACS ships with Home Assistant as **Settings → Marketplace**. To add this repository before it is in the default catalog:
+BLE String Lights is in the HACS default catalog.
 
-1. Go to **Settings → Marketplace**.
-2. In the upper-right corner, select **Add from link**.
-3. Enter `https://github.com/DomiCreation/ble-string-lights-hacs` (or `DomiCreation/ble-string-lights-hacs`) and select **Add**. Connect GitHub if prompted.
-4. Open the repository in the list and install it, then restart Home Assistant if asked.
-
-### Home Assistant 2024.6–2026.10 (HACS)
-
-1. [Install HACS](https://www.hacs.xyz/docs/use/download/download/) if you do not have it yet.
-2. In Home Assistant: **HACS → ⋮ → Custom repositories**, add `https://github.com/DomiCreation/ble-string-lights-hacs`, category **Integration**.
-3. Download **BLE String Lights** and restart Home Assistant.
+1. Home Assistant 2026.11 and later: open **Settings → Marketplace**. Older versions: open **HACS** ([install HACS](https://www.hacs.xyz/docs/use/download/download/) first if you do not have it).
+2. Search for **BLE String Lights** and open it.
+3. Download/install it and restart Home Assistant.
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DomiCreation&repository=ble-string-lights-hacs&category=integration)
 
-On Home Assistant 2026.11 and later this my-link still works; it opens the repository in the Marketplace.
+### Fallback: add as custom repository
+
+Only needed if the integration does not show up in the search.
+
+- Home Assistant 2026.11 and later: **Settings → Marketplace**, upper-right **Add from link**, enter `https://github.com/DomiCreation/ble-string-lights-hacs` and select **Add**.
+- Home Assistant 2024.6–2026.10: **HACS → ⋮ → Custom repositories**, add `https://github.com/DomiCreation/ble-string-lights-hacs`, category **Integration**.
+
+Then install **BLE String Lights** and restart Home Assistant.
 
 ### Manual
 
@@ -99,24 +99,24 @@ Die Lichterkette nimmt meist nur eine Bluetooth-Verbindung gleichzeitig an. Schl
 
 ## Installation
 
-### Home Assistant 2026.11 und neuer (Marketplace)
+### HACS / Marketplace (empfohlen)
 
-Ab dieser Version ist HACS als **Einstellungen → Marketplace** fest eingebaut. So fügst du dieses Repository hinzu, solange es noch nicht im Standardkatalog steht:
+BLE String Lights steht im Standardkatalog von HACS.
 
-1. **Einstellungen → Marketplace** öffnen.
-2. Oben rechts **Add from link** / **Über Link hinzufügen** wählen.
-3. `https://github.com/DomiCreation/ble-string-lights-hacs` (oder `DomiCreation/ble-string-lights-hacs`) eintragen und **Add** wählen. GitHub bei Bedarf verbinden.
-4. Das Repository in der Liste öffnen, installieren und Home Assistant bei Bedarf neu starten.
-
-### Home Assistant 2024.6–2026.10 (HACS)
-
-1. [HACS installieren](https://www.hacs.xyz/docs/use/download/download/), falls noch nicht vorhanden.
-2. In Home Assistant: **HACS → ⋮ → Benutzerdefinierte Repositories**, `https://github.com/DomiCreation/ble-string-lights-hacs` eintragen, Typ **Integration**.
-3. **BLE String Lights** herunterladen und Home Assistant neu starten.
+1. Home Assistant 2026.11 und neuer: **Einstellungen → Marketplace** öffnen. Ältere Versionen: **HACS** öffnen (vorher [HACS installieren](https://www.hacs.xyz/docs/use/download/download/), falls noch nicht vorhanden).
+2. Nach **BLE String Lights** suchen und öffnen.
+3. Herunterladen/installieren und Home Assistant neu starten.
 
 [![Home Assistant öffnen und das Repository im Home Assistant Community Store anzeigen.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DomiCreation&repository=ble-string-lights-hacs&category=integration)
 
-Unter Home Assistant 2026.11 und neuer funktioniert dieser My-Link weiterhin und öffnet das Repository im Marketplace.
+### Ausweichweg: als benutzerdefiniertes Repository hinzufügen
+
+Nur nötig, falls die Integration in der Suche nicht auftaucht.
+
+- Home Assistant 2026.11 und neuer: **Einstellungen → Marketplace**, oben rechts **Add from link** / **Über Link hinzufügen**, `https://github.com/DomiCreation/ble-string-lights-hacs` eintragen und **Add** wählen.
+- Home Assistant 2024.6–2026.10: **HACS → ⋮ → Benutzerdefinierte Repositories**, `https://github.com/DomiCreation/ble-string-lights-hacs` eintragen, Typ **Integration**.
+
+Danach **BLE String Lights** installieren und Home Assistant neu starten.
 
 ### Manuell
 
